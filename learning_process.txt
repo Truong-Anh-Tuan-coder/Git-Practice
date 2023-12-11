@@ -1,0 +1,15 @@
+learn 3 things: view history,alias, diff
+-VIEW HISTORY. (git log)
+	cơ bản có 2 option: 1 dùng gitk, hoặc gitX. Gitk và Gitx là GUI của git, khác biệt nằm ở chổ, GitK xài cho Window OS, còn Gitx là phiên bản xài cho IOS OS. Cú pháp, Gitk --all &. Nếu ko dùng --all thì nó chỉ hiển thị git log cho cái branch ở HEAD, còn Nếu ko dùng & thì git bash sẽ bị đơ buộc phải tắt git bash.
+	
+	Dùng git Log, git log nó sẽ hiện thị view history của cái history đó, cái này dùng cũng được nhưng bị cái nó rất khó nhìn và tổng hợp được thông tin. Có thể cải thiện thông qua alias adog "log --all --decorate --oneline --graph", hoặc làm 1 cái function phức tạp hơn ở alias.(vì thấy nó ko cần thiết với lại dùng gitK nó lẹ hơn nên ko nhắc nhiều đến nó).
+
+-Git diff 
+	dùng để so sánh khác biệt giữ các file( working directory | staging area | .git directory (respository).
+	
+	git diff (afile) để so sánh giữ staging area và working directory.
+	git diff HEAD (afile) để so sánh 1 file giữa file đó nằm ở respository và working directory. 
+	git diff --staged HEAD (afile) để so sánh 1 file (afile) mà file đó vần còn nằm ở chổ staging area và 1 file nằm ở repository. (afile) nó cần specify là so sánh giữa file nó.
+	git diff -- staged (hash point of respository) (afile) đểso sánh (afile) ở staging area và chính file đó ở specific point of version.
+	git diff  (hash point of respository) ( another (hash point of respository)) (afile) để so sánh (afile) giữ 2 version.
+	
